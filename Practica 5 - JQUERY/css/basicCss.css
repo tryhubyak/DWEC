@@ -1,0 +1,64 @@
+:root {
+    --body: #908E7D;
+    --black: #000000;
+    --white: #ffffff;
+    --textwhite: rgba(255, 255, 255, 0.63);
+    --transpblack: rgba(0, 0, 0, 0.48);
+    --body2: #B7B7B7;
+}
+
+html {
+    font-size: 62.5%;
+}
+  /*1 rem = 10px*/
+
+body {
+    background-color: var(--body);
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+/*SVG Rule*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40;
+  font-size: 4.5rem;
+}
+
+.headerNF{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 4rem;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.banner{
+    background-image: url(/img/BannerNF.png);
+}
+
+.btn{
+    color: var(--white);
+}
+
+.btn:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/*Overall rules*/
+p{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
