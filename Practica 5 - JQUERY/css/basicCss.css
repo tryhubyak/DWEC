@@ -40,7 +40,7 @@ body {
 }
 
 .banner{
-    background-image: url(/img/BannerNF.png);
+    padding: 0;
 }
 
 .btn{
