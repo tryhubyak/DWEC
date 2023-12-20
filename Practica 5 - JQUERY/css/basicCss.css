@@ -1,64 +1,83 @@
 :root {
-    --body: #908E7D;
-    --black: #000000;
-    --white: #ffffff;
-    --textwhite: rgba(255, 255, 255, 0.63);
-    --transpblack: rgba(0, 0, 0, 0.48);
-    --body2: #B7B7B7;
+  --body: #908e7d;
+  --black: #000000;
+  --white: #ffffff;
+  --textwhite: rgba(255, 255, 255, 0.63);
+  --transpblack: rgba(0, 0, 0, 0.48);
+  --body2: #b7b7b7;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-  /*1 rem = 10px*/
+/*1 rem = 10px*/
 
 body {
-    background-color: var(--body);
-    margin: 0;
-    padding: 0;
-    font-family: 'Karla', sans-serif;
+  background-color: var(--body);
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
 }
 
 /*SVG Rule*/
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 40;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
   font-size: 4.5rem;
 }
 
-.headerNF{
-    background-color: var(--black);
-    color: var(--white);
+.headerNF {
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 4rem;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+
+.dropdown-menu{
+    font-size: 2.75rem;
+}
+
+.btn-merch{
     font-size: 4rem;
 }
 
-.container-fluid{
-    padding: 0;
+.bannerNF {
+  background-image: url("../img/BannerNF.png"); /* Replace 'your-image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner{
-    padding: 0;
+.container-fluid {
+  padding: 0;
 }
 
-.btn{
-    color: var(--white);
+.btn {
+  color: var(--white);
 }
 
-.btn:hover{
-    background-color: var(--white);
-    color: var(--black);
+a.btn:hover {
+  color: black;
+  background-color: var(--white);
 }
 
 /*Overall rules*/
-p{
-    color: var(--white);
-    font-size: 2rem;
+p {
+  color: var(--white);
+  font-size: 2rem;
 }
 
-a{
-    color: var(--white);
-    text-decoration: none;
+a {
+  color: var(--white);
+  text-decoration: none;
 }

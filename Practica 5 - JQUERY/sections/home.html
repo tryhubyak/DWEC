@@ -30,28 +30,40 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="./home.html" class="nav-link text-white">HOME</a></li>
                 <li><a href="./new.html" class="nav-link text-white">NEW</a></li>
-                <li><a href="./merch.html" class="nav-link text-white">MERCH</a></li>
+                
+                <div class="dropdown">
+                  <button
+                    class="btn btn-merch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    MERCH
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="./merch.html">TOPS</a></li>
+                    <li><a class="dropdown-item" href="./merch.html">BOTTOMS</a></li>
+                    <li><a class="dropdown-item" href="./merch.html">ACCESSORIES</a></li>
+                    <li><a class="dropdown-item" href="./merch.html">SALE</a></li>
+                    <li><a class="dropdown-item" href="./merch.html">TOUR ITEMS</a></li>
+                  </ul>
+                </div>
             </ul>
 
             <!--COMPRA Y PERFIL-->
             <div class="text-end">
-                <button type="button" class="btn me-2">
-                    <a href="./shoppingCart.html">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </a>
-                </button>
-                <button type="button" class="btn me-2">
-                    <a href="./personalProfile.html">
-                        <span class="material-symbols-outlined">person</span>
-                    </a>
-                </button>
-            </div>
+                <a type="button" class="btn me-2" href="./shoppingCart.html">
+                  <span class="material-symbols-outlined"> shopping_cart </span>
+                </a>
+                <a type="button" class="btn me-2" href="./personalProfile.html">
+                  <span class="material-symbols-outlined"> person </span>
+                </a>
         </div>
       </div>
     </header>
     <!--Photo Banner-->
-    <div class="container p-0 m-0 position-relative">
-      <img src="../img/BannerNF.png" class="img-fluid" alt="">
+    <div class="bannerNF">
     </div>
     <!--Video carousel-->
     <div class="container">
