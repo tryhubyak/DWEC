@@ -1,0 +1,50 @@
+[
+    {
+        "id": 13,
+        "foto": "img/articulos/tops/hopeLT.webp",
+        "nombre": "HOPE LONGSLEEVE",
+        "precio": 35.99
+    },
+    {
+        "id": 14,
+        "foto": "img/articulos/tops/hopewhiteLT.webp",
+        "nombre": "WHITE HOPE LONGSLEEVE",
+        "precio": 45.99
+    },
+    {
+        "id": 15,
+        "foto": "img/articulos/tops/logohoodie.webp",
+        "nombre": "NF HOODIE",
+        "precio": 30.99
+    },
+    {
+        "id": 16,
+        "foto": "img/articulos/tops/lostS.webp",
+        "nombre": "LOST SWEETSHIRT",
+        "precio": 35.99
+    },
+    {
+        "id": 17,
+        "foto": "img/articulos/tops/lostsoulhoodie.webp",
+        "nombre": "LOST SOUL HOODIE",
+        "precio": 45.99
+    },
+    {
+        "id": 18,
+        "foto": "img/articulos/tops/lostsoulT.webp",
+        "nombre": "LOST SOUL T-SHIRT",
+        "precio": 25.99
+    },
+    {
+        "id": 19,
+        "foto": "img/articulos/tops/runnningT.webp",
+        "nombre": "RUNNING T-SHIRT",
+        "precio": 25.99
+    },
+    {
+        "id": 20,
+        "foto": "img/articulos/tops/succesLT.webp",
+        "nombre": "SUCCESS LONGSLEEVE",
+        "precio": 39.99
+    }
+]

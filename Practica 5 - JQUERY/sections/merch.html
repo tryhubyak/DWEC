@@ -36,16 +36,17 @@
                     <li><a href="./new.html" class="nav-link text-white">NEW</a></li>
                     
                     <div class="dropdown">
-                      <button
+                      <a href="./merch.html">
+                        <button
                         class="btn btn-merch dropdown-toggle"
                         type="button"
                         id="dropdownMenuButton"
                         data-mdb-toggle="dropdown"
                         aria-expanded="false"
-                        href="./merch.html"
                       >
                         MERCH
                       </button>
+                      </a>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./merch.html">TOPS</a></li>
                         <li><a class="dropdown-item" href="./merch.html">BOTTOMS</a></li>
@@ -55,17 +56,101 @@
                     </div>
                 </ul>
     
-                <!--COMPRA Y PERFIL-->
+                <!--COMPRA-->
                 <div class="text-end">
-                    <a type="button" class="btn me-2" href="./shoppingCart.html">
-                      <span class="material-symbols-outlined"> shopping_cart </span>
-                    </a>
-                    <a type="button" class="btn me-2" href="./personalProfile.html">
-                      <span class="material-symbols-outlined"> person </span>
-                    </a>
-            </div>
+                  <a type="button" class="btn me-2" href="./shoppingCart.html">
+                    <span class="material-symbols-outlined"> shopping_cart </span>
+                  </a>
+              </div>
           </div>
         </header>
+        <!--Carrousel-->
+        <div class="container">
+          <br>
+          <h2>DISCOVER</h2>
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner justify-content-center align-items-center">
+              <div class="carousel-item active">
+                <div class="d-flex">
+                  <img src="../img/articulos/Discs/blackvinyl.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                  <img src="../img/articulos/Discs/whitevinyl.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                  <img src="../img/articulos/Discs/signed.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img src="../img/articulos/hats/browndadhatlogo.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                  <img src="../img/articulos/hats/graydadhat.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                  <img src="../img/articulos/hats/whitedadhat.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                  <img src="../img/articulos/tops/hopewhiteLT.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                  <img src="../img/articulos/tops/runnningT.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                  <img src="../img/articulos/tops/succesLT.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <hr>
+        </div>
+        <br>
+        <!--Toda la tienda-->
+        <div class="container">
+          <h2>COLLECTION</h2>
+          <br>
+          <div class="row">
+            <div class="col-4 col-md-4 col-lg-2">
+                <ul class="list-group list-group-flush">
+                  <!--
+                    <li class="list-group-item">
+                    <div class="input-group rounded">
+                      <input type="search" class="form-control rounded" placeholder="Search" 
+                      aria-label="Search"/>
+                    </div>
+                  </li>
+                  -->
+                  <li class="list-group-item">TOPS</li>
+                  <li class="list-group-item">BOTTOMS</li>
+                  <li class="list-group-item">HATS</li>
+                  <li class="list-group-item">CDs</li>
+                  <li class="list-group-item">TOUR BUNDLE</li>
+                </ul>
+            </div>
+            <div class="col-8 col-md-8 col-lg-10">
+              <img src="../img/articulos/bottoms/bottom1.webp" alt="" class="tienda">
+              <img src="../img/articulos/bottoms/bottom2.webp" alt="" class="tienda">
+              <img src="../img/articulos/tops/hopeLT.webp" alt="" class="tienda"> 
+              <img src="../img/articulos/hats/blackdadhatlogo.webp" alt="" class="tienda">
+            </div>
+            <div class="col-4 col-md-4 col-lg-2"></div>
+            <div class="col-8 col-md-8 col-lg-10">
+              <img src="../img/articulos/tops/hopewhiteLT.webp" alt="" class="tienda">
+              <img src="../img/articulos/tops/lostsoulhoodie.webp" alt="" class="tienda">
+              <img src="../img/articulos/tops/runnningT.webp" alt="" class="tienda"> 
+              <img src="../img/articulos/hats/browndadhatlogo.webp" alt="" class="tienda">
+            </div>
+            <div class="col-4 col-md-4 col-lg-2"></div>
+            <div class="col-8 col-md-8 col-lg-10">
+              <img src="../img/articulos/tops/lostS.webp" alt="" class="tienda">
+              <img src="../img/articulos/tops/succesLT.webp" alt="" class="tienda">
+              <img src="../img/articulos/tops/logohoodie.webp" alt="" class="tienda"> 
+              <img src="../img/articulos/hats/realdadhat.webp" alt="" class="tienda">
+            </div>
+          </div>
+          
+        </div>
+
+        <br><br><br>
     <!--Footer-->
     <footer class="footer mt-auto py-3">
       <br>

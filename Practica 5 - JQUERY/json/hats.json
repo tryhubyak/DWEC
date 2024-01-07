@@ -1,0 +1,38 @@
+[
+    {
+        "id": 7,
+        "foto": "img/articulos/hats/blackdadhatlogo.webp",
+        "nombre": "BLACK DAD HAT",
+        "precio": 25.99
+    },
+    {
+        "id": 8,
+        "foto": "img/articulos/hats/browndadhatlogo.webp",
+        "nombre": "BROWN DAD HAT",
+        "precio": 25.99
+    },
+    {
+        "id": 9,
+        "foto": "img/articulos/hats/creambeanie.webp",
+        "nombre": "CREAM BEANIE",
+        "precio": 20.99
+    },
+    {
+        "id": 10,
+        "foto": "img/articulos/hats/graydadhat.webp",
+        "nombre": "GRAY DAD HAT",
+        "precio": 25.99
+    },
+    {
+        "id": 11,
+        "foto": "img/articulos/hats/realdadhat.webp",
+        "nombre": "REAL DAD HAT",
+        "precio": 20.99
+    },
+    {
+        "id": 12,
+        "foto": "img/articulos/hats/whitedadhat.webp",
+        "nombre": "WHITE DAD HAT",
+        "precio": 25.99
+    }
+]

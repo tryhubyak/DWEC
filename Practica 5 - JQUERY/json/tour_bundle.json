@@ -1,0 +1,26 @@
+[
+    {
+        "id": 21,
+        "foto": "img/articulos/tour_bundle/bundle1.webp",
+        "nombre": "HOPE BUNDLE 1",
+        "precio": 50.99
+    },
+    {
+        "id": 22,
+        "foto": "img/articulos/tour_bundle/bundle2.webp",
+        "nombre": "HOPE BUNDLE 2",
+        "precio": 50.99
+    },
+    {
+        "id": 23,
+        "foto": "img/articulos/tour_bundle/bundle3.webp",
+        "nombre": "HOPE BUNDLE 3",
+        "precio": 50.99
+    },
+    {
+        "id": 24,
+        "foto": "img/articulos/tour_bundle/bundle4.webp",
+        "nombre": "HOPE BUNDLE 4",
+        "precio": 50.99
+    }
+]

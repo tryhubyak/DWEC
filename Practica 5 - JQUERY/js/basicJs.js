@@ -1,3 +1,4 @@
+//Carousel home
 $(document).ready(function(){
-    $('#myCarousel').carousel();
-  });
+  $('#myCarousel').carousel();
+});

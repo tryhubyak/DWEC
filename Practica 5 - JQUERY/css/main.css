@@ -68,12 +68,56 @@ body {
   margin: 0;
 }
 
+.bundleimg{
+  width: 50rem;
+}
+
+.h2bundle{
+  color: var(--transpblack);
+  font-size: 5rem;
+}
+
 .container-fluid {
   padding: 0;
 }
 
 .btn {
   color: var(--white);
+}
+
+.m-0{
+  margin: 0;
+}
+
+.carrouselitem{
+  width: 32rem;
+}
+
+.tienda{
+  width: 26rem;
+}
+
+.list-group{
+  background-color: var(--body);
+}
+
+.list-group-item{
+  background-color: var(--body);
+  color: var(--white);
+  font-size: 2rem;
+  cursor: default;
+}
+
+.form-control{
+  background-color: var(--body);
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.form-control:enabled{
+  background-color: var(--body);
+  color: var(--white) ;
+  box-shadow: none;
 }
 
 footer {
@@ -108,4 +152,8 @@ a {
 h2{
   color: var(--transpblack);
   font-size: 5rem;
+}
+
+hr{
+  color: var(--black);
 }

@@ -1,17 +1,5 @@
 [
     {
-        "id": 1,
-        "foto": "img/articulos/bottoms7bottom1.webp",
-        "nombre": "SWEETPANTS HOPE",
-        "precio": 30.00
-    },
-    {
-        "id": 2,
-        "foto": "img/articulos/bottoms/bottom2.webp",
-        "nombre": "SWEETPANTS LOST SOUL",
-        "precio": 30.00
-    },
-    {
         "id": 3, 
         "foto": "img/articulos/Discs/blackvinyl.webp",
         "nombre": "BLACK VINYL HOPE",
@@ -35,4 +23,4 @@
         "nombre": "SIGNED CD HOPE",
         "precio": 25.99
     }
-  ]
+]
