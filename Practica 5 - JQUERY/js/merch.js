@@ -40,7 +40,6 @@ if (window.matchMedia("(width: 390px) and (height: 844px)").matches) {
   discoverS();
 }
 
-//seccion MERCH
 $.ajax({
   url: '../json/all.json',
   method: 'GET',
@@ -49,10 +48,18 @@ $.ajax({
     var dataRandom = shuffleArray(data);
     itemsHTML(dataRandom);
 
-
     $('.buscar input').on('input', function () {
       var searchTerm = $(this).val().toLowerCase();
       filterItems(dataRandom, searchTerm);
+    });
+
+    $('.list-group-item.prendas').on('click', function () {
+      var category = $(this).data('category');
+      if (category === 'ALL') {
+        itemsHTML(dataRandom);
+      } else {
+        filterByCategory(dataRandom, category);
+      }
     });
   },
   error: function (error) {
@@ -84,11 +91,26 @@ function filterItems(data, searchTerm) {
   var contenedorall = $('#contenedorall');
   contenedorall.empty();
 
-  var filteredData = data.filter(function (all) {
+  var nofiltro = data.filter(function (all) {
     return all.nombre.toLowerCase().includes(searchTerm);
   });
 
-  itemsHTML(filteredData);
+  itemsHTML(nofiltro);
+}
+
+function filterByCategory(data, category) {
+  var contenedorall = $('#contenedorall');
+  contenedorall.empty();
+
+  var filtro = data.filter(function (item) {
+    return itemCategoria(item) === category;
+  });
+
+  itemsHTML(filtro);
+}
+
+function itemCategoria(item) {
+  return item.categoria;
 }
 
 function shuffleArray(array) {
@@ -98,4 +120,3 @@ function shuffleArray(array) {
   }
   return array;
 }
-
