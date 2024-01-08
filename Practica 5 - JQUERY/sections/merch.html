@@ -92,47 +92,26 @@
         <br>
         <!--Toda la tienda-->
         <div class="container">
-          <div class="row">
-            <h2 class="col-lg-3">COLLECTION</h2>
-            <div class="input-group rounded col-10 col-md-10 col-lg-4">
-              <input type="search" class="form-control rounded" placeholder="Search" 
-              aria-label="Search"/>
+          <h2 class="text-center">COLLECTION</h2>
+          <div class="buscar">
+            <div class="input-group rounded col-10 col-md-6 col-lg-3">
+              <input type="search" class="form-control rounded" 
+              placeholder="Search" aria-label="Search" oninput="buscarPrenda(this.value)" />
             </div>
+
           </div>
           <br>
-          <div class="row">
-            <div class="col-10 col-md-10 col-lg-2">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">TOPS</li>
-                  <li class="list-group-item">BOTTOMS</li>
-                  <li class="list-group-item">HATS</li>
-                  <li class="list-group-item">CDs</li>
-                  <li class="list-group-item">TOUR BUNDLE</li>
+          <div class="row justify-content-center">
+            <div class="col-10 col-md-10 col-lg-12">
+                <ul class="nav col-12 col-md-auto col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li class="list-group-item prendas">TOPS |</li>
+                  <li class="list-group-item prendas">BOTTOMS |</li>
+                  <li class="list-group-item prendas">HATS |</li>
+                  <li class="list-group-item prendas">CDs |</li>
+                  <li class="list-group-item prendas">TOUR BUNDLE |</li>
                 </ul>
             </div>
-            <div class="col-8 col-md-4 col-lg-10">
-              <img src="../img/articulos/bottoms/bottom1.webp" alt="" class="tienda">
-              <img src="../img/articulos/bottoms/bottom2.webp" alt="" class="tienda">
-              <img src="../img/articulos/tops/hopeLT.webp" alt="" class="tienda"> 
-            </div>
-            <div class="col-10 col-md-1 col-lg-2"></div>
-            <div class="col-8 col-md-4 col-lg-10">
-              <img src="../img/articulos/tops/hopewhiteLT.webp" alt="" class="tienda">
-              <img src="../img/articulos/tops/lostsoulhoodie.webp" alt="" class="tienda">
-              <img src="../img/articulos/tops/runnningT.webp" alt="" class="tienda"> 
-            </div>
-            <div class="col-10 col-md-1 col-lg-2"></div>
-            <div class="col-8 col-md-4 col-lg-10">
-              <img src="../img/articulos/tops/lostS.webp" alt="" class="tienda">
-              <img src="../img/articulos/tops/succesLT.webp" alt="" class="tienda">
-              <img src="../img/articulos/tops/logohoodie.webp" alt="" class="tienda"> 
-            </div>
-            <div class="col-10 col-md-1 col-lg-2"></div>
-            <div class="col-8 col-md-4 col-lg-10">
-              <img src="../img/articulos/hats/browndadhatlogo.webp" alt="" class="tienda">
-              <img src="../img/articulos/hats/creambeanie.webp" alt="" class="tienda">
-              <img src="../img/articulos/hats/realdadhat.webp" alt="" class="tienda"> 
-            </div>
+            <div id="contenedorall" class="row"></div>
           </div>
         </div>
         <br><br><br>
@@ -181,7 +160,7 @@
     <script src="../bootstap/js/bootstrap.min.js"></script>
     <script src="../Jquery/jquery-3.7.1.min.js"></script>
     <script src="../slick/slick.js"></script>
-    <script src="../js/basicJs.js"></script>
+    <script src="../js/merch.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>
