@@ -4,12 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>NF</title>
+        <!--Slick-->
+        <link rel="stylesheet" href="../slick/slick.css">
+        <link rel="stylesheet" href="../slick/slick-theme.css">
         <!--Bootstrap-->
         <link rel="stylesheet" href="../bootstap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../bootstap/css/bootstrap-grid.css" />
-        <script src="../bootstap/js/bootstrap.min.js"></script>
-        <!--JQUERY-->
-        <script src="../Jquery/jquery-3.7.1.min.js"></script>
         <!--SVG-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
         <!--Font-->
@@ -17,7 +17,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@300&display=swap" rel="stylesheet"/>
         <!--Personal-->
-        <script src="../js/basicJs.js"></script>
         <link rel="stylesheet" href="../css/main.css" />
       </head>
       <body>
@@ -68,39 +67,26 @@
         <div class="container">
           <br>
           <h2>DISCOVER</h2>
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner justify-content-center align-items-center">
-              <div class="carousel-item active">
-                <div class="d-flex">
-                  <img src="../img/articulos/Discs/blackvinyl.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                  <img src="../img/articulos/Discs/whitevinyl.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                  <img src="../img/articulos/Discs/signed.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex">
-                  <img src="../img/articulos/hats/browndadhatlogo.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                  <img src="../img/articulos/hats/graydadhat.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                  <img src="../img/articulos/hats/whitedadhat.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex">
-                  <img src="../img/articulos/tops/hopewhiteLT.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                  <img src="../img/articulos/tops/runnningT.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                  <img src="../img/articulos/tops/succesLT.webp" class="d-block mx-auto img-fluid m-0 carrouselitem" alt="Slide 1">
-                </div>
-              </div>
+          <section class="center slider">
+            <div>
+              <img src="../img/articulos/Discs/blackvinyl.webp" class="carrouselitem" alt="Slide 1">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+            <div>
+              <img src="../img/articulos/hats/browndadhatlogo.webp" class="carrouselitem" alt="Slide 4">
+            </div>
+            <div>
+              <img src="../img/articulos/Discs/signed.webp" class="carrouselitem" alt="Slide 3">
+            </div>
+            <div>
+              <img src="../img/articulos/hats/graydadhat.webp" class="carrouselitem" alt="Slide 5">
+            </div>
+            <div>
+              <img src="../img/articulos/Discs/whitevinyl.webp" class="carrouselitem" alt="Slide 2">
+            </div>
+            <div>
+              <img src="../img/articulos/hats/whitedadhat.webp" class="carrouselitem" alt="Slide 1">
+            </div>
+          </section>
           <hr>
         </div>
         <br>
@@ -190,5 +176,12 @@
       </div>
       <br>
     </footer>
+
+    <!--SCRIPTS-->
+    <script src="../bootstap/js/bootstrap.min.js"></script>
+    <script src="../Jquery/jquery-3.7.1.min.js"></script>
+    <script src="../slick/slick.js"></script>
+    <script src="../js/basicJs.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

@@ -90,7 +90,18 @@ body {
 }
 
 .carrouselitem{
-  width: 32rem;
+  width: 35rem;
+  padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+@media screen and (width: 390px) and (height: 844px) {
+  /* Your styles for this screen size */
+  .carrouselitem{
+    width: 28rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
 }
 
 .tienda{
@@ -157,3 +168,5 @@ h2{
 hr{
   color: var(--black);
 }
+
+/*Carousel*/
