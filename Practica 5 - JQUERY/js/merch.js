@@ -79,6 +79,7 @@ function itemsHTML(data) {
           <div class="card-body">
             <h3 class="card-title">${all.nombre}</h3>
             <p class="card-text">$${all.precio}</p>
+            <button type="button" class="btn btn-light cartb" onclick="addToCart('${all.nombre}', ${all.precio})">ADD TO CART</button>
           </div>
         </div>
       </div>
@@ -120,3 +121,25 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+//carrito
+var shoppingCart = [];
+
+function addToCart(productName, productPrice) {
+  var item = {
+    name: productName,
+    price: productPrice
+  };
+
+  shoppingCart.push(item);
+
+  saveCartToLocalStorage();
+
+  alert("THIS ITEM HAS BEEN ADDED TO YOUR CART");
+}
+
+function saveCartToLocalStorage() {
+  localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+}
+
+

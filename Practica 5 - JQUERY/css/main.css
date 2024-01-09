@@ -164,6 +164,48 @@ body {
   margin: 1rem;
 }
 
+.cartb{
+  background-color: #868686;
+  color: rgb(41, 41, 41);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-color: var(--body);
+  padding: 1rem;
+}
+
+.h2cart{
+  color: white;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.checkout{
+  background-color: #dfdfdf;
+  color: rgb(41, 41, 41);
+  font-size: 3rem;
+  border-color: var(--body);
+  padding: 1rem;
+}
+
+
+@media (max-width: 390px) and (max-height: 844px) {
+  .table, th, td {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+tbody{
+  font-size: 3rem;
+}
+
+thead{
+  font-size: 2rem;
+}
+
 footer {
   background-color: var(--transpblack);
 }

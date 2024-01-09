@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@300&display=swap" rel="stylesheet"/>
         <!--Personal-->
-        <link rel="stylesheet" href="../css/profile.css"/>
+        <link rel="stylesheet" href="../css/main.css"/>
       </head>
       <body>
         <!--Header-->
@@ -30,26 +30,7 @@
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="./home.html" class="nav-link text-white">HOME</a></li>
                     <li><a href="./new.html" class="nav-link text-white">NEW</a></li>
-                    
-                    <div class="dropdown">
-                      <a href="./merch.html">
-                        <button
-                        class="btn btn-merch dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        MERCH
-                      </button>
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="./merch.html">TOPS</a></li>
-                        <li><a class="dropdown-item" href="./merch.html">BOTTOMS</a></li>
-                        <li><a class="dropdown-item" href="./merch.html">HATS</a></li>
-                        <li><a class="dropdown-item" href="./merch.html">BUNDLES</a></li>
-                      </ul>
-                    </div>
+                    <li><a href="./merch.html" class="nav-link text-white">MERCH</a></li>
                 </ul>
     
                 <!--COMPRA-->
@@ -60,6 +41,20 @@
               </div>
           </div>
         </header>
+        
+        <!--Carrito-->
+        <div class="bannerNF">
+          <div class="container mt-4">
+            <h2 class="h2cart">Your Shopping Cart</h2>
+            <div id="cartItems">
+          </div>
+          <div class="text-end mt-3">
+            <button class="btn checkout" id="checkoutButton" onclick="checkout()">CHECKOUT</button>
+          </div>
+        </div>
+        </div>
+        
+        <br>
     <!--Footer-->
     <footer class="footer mt-auto py-3">
       <br>
@@ -103,6 +98,7 @@
     <!--Scripts-->
     <script src="../bootstap/js/bootstrap.min.js"></script>
     <script src="../Jquery/jquery-3.7.1.min.js"></script>
-    <script src="../js/basicJs.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/merch.js"></script>
 </body>
 </html>
