@@ -37,7 +37,7 @@ export class StockComponent {
 
   addProduct(): void {
     if (this.product.code === '' || this.product.code === '0') {
-      alert('El código del producto no puede ser vacío o cero.');
+      alert('The code cannot be empty or 0');
       return;
     }
 
@@ -47,7 +47,7 @@ export class StockComponent {
 
     if (existingProduct) {
       alert(
-        'El producto con este código ya existe. Introduce un código único.'
+        'A product with such code already exists. Please try inserting new one (must be unique)'
       );
       return;
     }
@@ -65,7 +65,7 @@ export class StockComponent {
 
   modifyProduct(): void {
     if (this.product.code === '') {
-      alert('El código del producto no puede ser vacío.');
+      alert('The Code cannot be empty');
       return;
     }
 
@@ -74,12 +74,12 @@ export class StockComponent {
     );
 
     if (existingProductIndex === -1) {
-      alert('El producto con este código no está registrado.');
+      alert('A product with sush code already exists');
       return;
     }
 
     this.products[existingProductIndex] = { ...this.product };
-    alert(`Producto modificado. Código: ${this.product.code}`);
+    alert(`Product has been modified. Code: ${this.product.code}`);
 
     this.product = {
       code: '',
