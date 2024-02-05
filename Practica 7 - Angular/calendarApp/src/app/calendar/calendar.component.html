@@ -44,7 +44,9 @@
                 <button class="btn btn-warning m-1" (click)="deleteTask(task)">
                   Delete Task
                 </button>
-                <button class="btn btn-secondary m-1">Modify Task</button>
+                <button class="btn btn-info m-1" (click)="modifyTask(task)">
+                  Modify Task
+                </button>
               </div>
             </div>
           </div>
@@ -54,15 +56,89 @@
   </div>
 </div>
 
-<!--Contenedor para crear tareas-->
+<!-- Ventana emergente para modificar tarea -->
+<div class="modal" *ngIf="selectedTask">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modify Task</h5>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="selectedTask = null"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              name="name"
+              type="text"
+              [(ngModel)]="selectedTask.name"
+              class="form-control"
+              id="nameInput"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="asigned_person" class="form-label"
+              >Assigned Person</label
+            >
+            <input
+              name="asigned_person"
+              type="text"
+              [(ngModel)]="selectedTask.asigned_person"
+              class="form-control"
+              id="asigned_personInput"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input
+              name="subject"
+              type="text"
+              [(ngModel)]="selectedTask.subject"
+              class="form-control"
+              id="subjectInput"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input
+              name="description"
+              type="text"
+              [(ngModel)]="selectedTask.description"
+              class="form-control"
+              id="descriptionInput"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="saveChanges()">
+          Save Changes
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="selectedTask = null"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!--Contenedor para crear tareas-->
 <div class="container-75 m-3">
   <div class="row">
     <div class="card border-primary">
       <div class="card-header">New task</div>
 
       <div class="card border-primary p-3 m-3 col-6 justify-content-center">
-        <h2>Create a new task</h2>
+        <h2>Create Task</h2>
         <form>
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -106,24 +182,9 @@
               id="descriptionInput"
             />
           </div>
-          <button class="btn btn-primary m-1">Create Task</button>
-          <button class="btn btn-secondary m-1">Modify Task</button>
-          <!--
-                      <button
-            type="submit"
-            (click)="()"
-            class="btn btn-success py-3 col-2"
-          >
-            Add
+          <button class="btn btn-primary m-1" (click)="createTask()">
+            Create Task
           </button>
-          <button
-            type="submit"
-            (click)="()"
-            class="btn btn-warning py-3 col-2"
-          >
-            Edit
-          </button>
-          -->
         </form>
       </div>
     </div>

@@ -10,7 +10,7 @@ export class CalendarComponent {
   tasks: Task[] = [
     new Task(
       'T1',
-      'Practica Angular',
+      'Practica Angular 7',
       'Realizar ejercicios de storeApp y calendarApp',
       new Date('2024-02-01'),
       new Date('2024-02-06'),
@@ -23,12 +23,12 @@ export class CalendarComponent {
     ),
     new Task(
       'T2',
-      'Reunión de equipo',
-      'Planificación para el próximo proyecto',
+      'Proyecto fin de grado',
+      'Planificación para el próximo proyecto EAcademy',
       new Date('2024-02-03'),
       new Date('2024-02-03'),
-      'Proyecto',
-      'Juan',
+      'TFG',
+      'Veronika e Ismail',
       new Date(),
       new Date(),
       '',
@@ -36,12 +36,12 @@ export class CalendarComponent {
     ),
     new Task(
       'T3',
-      'Entrega de informe',
-      'Preparar y enviar el informe trimestral',
+      'Ingles CV ',
+      'Grabar video cd presentacion',
       new Date('2024-02-05'),
       new Date('2024-02-05'),
-      'Informe',
-      'Maria',
+      'Ingles',
+      'Veronika',
       new Date(),
       new Date(),
       '',
@@ -49,12 +49,12 @@ export class CalendarComponent {
     ),
     new Task(
       'T4',
-      'Investigación de mercado',
+      'Investigación de competencia',
       'Recopilar datos y analizar tendencias',
       new Date('2024-02-08'),
       new Date('2024-02-15'),
-      'Marketing',
-      'Carlos',
+      'TFG / Empresa',
+      'Veronika e Ismail',
       new Date(),
       new Date(),
       '',
@@ -63,11 +63,11 @@ export class CalendarComponent {
     new Task(
       'T5',
       'Entrenamiento',
-      'Sesión de entrenamiento físico',
+      'Gimnacio, dia de piernas',
       new Date('2024-02-10'),
       new Date('2024-02-10'),
-      'Salud',
-      'Laura',
+      'GYM',
+      'Veronika',
       new Date(),
       new Date(),
       '',
@@ -76,11 +76,11 @@ export class CalendarComponent {
     new Task(
       'T6',
       'Proyecto personal',
-      'Desarrollar una aplicación web pequeña',
+      'Desarrollar una aplicación web pequeña en java springboost para practicar',
       new Date('2024-02-12'),
       new Date('2024-02-28'),
-      'Desarrollo',
-      'Pedro',
+      'JAVA',
+      'Veronika',
       new Date(),
       new Date(),
       '',
@@ -104,6 +104,7 @@ export class CalendarComponent {
     isFinished: false,
   };
 
+  //Empieza la tarea, formatea el tiempo para poner dia y hora de comienzo
   startTask(task: Task) {
     task.init_date = new Date();
     task.formatted_init_date = this.formatDate(task.init_date!);
@@ -111,6 +112,7 @@ export class CalendarComponent {
     console.log(`Task "${task.name}" started at ${task.init_date!}`);
   }
 
+  //Termina la tarea, formatea el tiempo para poner dia y hora de final
   finishTask(task: Task) {
     task.end_date = new Date();
     task.formatted_end_date = this.formatDate(task.end_date!);
@@ -118,6 +120,7 @@ export class CalendarComponent {
     console.log(`Task "${task.name}" finished at ${task.end_date!}`);
   }
 
+  //elimina la tarea pidiendo confirmacion
   deleteTask(task: Task) {
     const confirmDelete = confirm(
       `Are you sure you want to delete the task "${task.name}"?`
@@ -129,6 +132,54 @@ export class CalendarComponent {
     }
   }
 
+  //Crear tarea
+  createTask() {
+    this.tasks.push(this.task);
+
+    // Reiniciar la tarea para el próximo ingreso
+    this.task = {
+      id: '',
+      name: '',
+      description: '',
+      init_date: new Date(),
+      end_date: new Date(),
+      subject: '',
+      asigned_person: '',
+      estimated_duration: new Date(),
+      real_time: new Date(),
+      formatted_init_date: '',
+      formatted_end_date: '',
+      isStarted: false,
+      isFinished: false,
+    };
+  }
+
+  //Modificar tarea
+  selectedTask: Task | null = null;
+  modifyTask(task: Task): void {
+    this.selectedTask = { ...task };
+  }
+
+  saveChanges(): void {
+    if (this.selectedTask) {
+      const index = this.tasks.findIndex(
+        (task) => task.id === this.selectedTask!.id
+      );
+
+      if (index !== -1) {
+        this.tasks[index] = { ...this.selectedTask };
+        console.log('Changes saved successfully.');
+      } else {
+        console.error('Task not found.');
+      }
+
+      this.selectedTask = null;
+    } else {
+      console.error('No task selected.');
+    }
+  }
+
+  //Formateo de tiempo usado en finish y start
   formatDate(date: Date): string {
     const options: Intl.DateTimeFormatOptions = {
       year: 'numeric',
