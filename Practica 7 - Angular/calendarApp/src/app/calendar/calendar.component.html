@@ -1,32 +1,89 @@
+<!--Contenedor de las tareas-->
 <div class="container-75 m-3">
   <div class="row">
     <div class="card border-primary">
       <div class="card-header">Active Tasks</div>
       <div *ngIf="tasks.length === 0; else taskList">
-        <p>No tasks available</p>
+        <h2 class="text-center m-3">No tasks available</h2>
       </div>
 
       <ng-template #taskList>
         <div class="row justify-content-around">
-          <div class="col-12 col-md-3 card border-primary m-2 p-3" *ngFor="let task of tasks">
-            <div class="task-card ">
+          <div
+            class="col-12 col-md-3 card border-primary m-2 p-3"
+            *ngFor="let task of tasks"
+          >
+            <div class="task-card">
               <h3>{{ task.name }}</h3>
+              <h4>{{ task.asigned_person }}</h4>
+              <p>{{ task.subject }}</p>
               <p>{{ task.description }}</p>
-              <p>Start Date: {{ task.init_date | date }}</p>
-              <p>End Date: {{ task.end_date | date }}</p>
-              <!-- Add more task information as needed -->
-
-              <!-- Buttons for starting and finishing tasks -->
-              <button class="btn btn-primary m-1" (click)="startTask(task)">
-                Start Task
-              </button>
-              <button class="btn btn-danger m-1" (click)="finishTask(task)">
-                Finish Task
-              </button>
+              <div *ngIf="task.isStarted">
+                <p>Started: {{ task.formatted_init_date }}</p>
+              </div>
+              <div *ngIf="task.isFinished">
+                <p>Finished: {{ task.formatted_end_date }}</p>
+              </div>
+              <div class="row m-1">
+                <button
+                  class="btn btn-success m-1"
+                  (click)="startTask(task)"
+                  [disabled]="task.isStarted || task.isFinished"
+                >
+                  Start Task
+                </button>
+                <button
+                  class="btn btn-danger m-1"
+                  (click)="finishTask(task)"
+                  [disabled]="!task.isStarted || task.isFinished"
+                >
+                  Finish Task
+                </button>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-warning m-1" (click)="deleteTask(task)">Delete Task</button>
+                <button class="btn btn-info m-1">Modify Task</button>
+              </div>
             </div>
           </div>
         </div>
       </ng-template>
+    </div>
+  </div>
+</div>
+
+<!--Contenedor para crear tareas-->
+
+<div class="container-75 m-3">
+  <div class="row">
+    <div class="card border-primary">
+      <div class="card-header">New task</div>
+
+      <div class="card border-primary p-3 m-3 col-6 justify-content-center">
+        <h2>Create a new task</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              name="name"
+              type="text"
+              [(ngModel)]="task.name"
+              class="form-control"
+              id="nameInput"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input
+              name="description"
+              type="text"
+              [(ngModel)]="task.description"
+              class="form-control"
+              id="descriptionInput"
+            />
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
