@@ -41,8 +41,10 @@
                 </button>
               </div>
               <div class="text-center">
-                <button class="btn btn-warning m-1" (click)="deleteTask(task)">Delete Task</button>
-                <button class="btn btn-info m-1">Modify Task</button>
+                <button class="btn btn-warning m-1" (click)="deleteTask(task)">
+                  Delete Task
+                </button>
+                <button class="btn btn-secondary m-1">Modify Task</button>
               </div>
             </div>
           </div>
@@ -73,6 +75,28 @@
             />
           </div>
           <div class="mb-3">
+            <label for="asigned_person" class="form-label"
+              >Asigned Person</label
+            >
+            <input
+              name="asigned_person"
+              type="text"
+              [(ngModel)]="task.asigned_person"
+              class="form-control"
+              id="asigned_personInput"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input
+              name="subject"
+              type="text"
+              [(ngModel)]="task.subject"
+              class="form-control"
+              id="subjectInput"
+            />
+          </div>
+          <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <input
               name="description"
@@ -82,6 +106,24 @@
               id="descriptionInput"
             />
           </div>
+          <button class="btn btn-primary m-1">Create Task</button>
+          <button class="btn btn-secondary m-1">Modify Task</button>
+          <!--
+                      <button
+            type="submit"
+            (click)="()"
+            class="btn btn-success py-3 col-2"
+          >
+            Add
+          </button>
+          <button
+            type="submit"
+            (click)="()"
+            class="btn btn-warning py-3 col-2"
+          >
+            Edit
+          </button>
+          -->
         </form>
       </div>
     </div>
