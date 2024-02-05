@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { Task } from '../models/task.model'; 
 
 @Component({
@@ -18,5 +17,11 @@ export class CalendarComponent {
     new Task('6', 'Proyecto personal', 'Desarrollar una aplicación web pequeña', new Date('2024-02-12'), new Date('2024-02-28'), 'Desarrollo', 'Pedro', new Date(), undefined)
   ];
 
-  
+  startTask(task: Task) {
+    console.log(`Task ${task.name} started.`);
+  }
+
+  finishTask(task: Task) {
+    console.log(`Task ${task.name} finished.`);
+  }
 }
